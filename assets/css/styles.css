@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -8,8 +8,8 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(12, 32%, 22%);
-  --first-color-alt: hsl(12, 42%, 12%);
+  --first-color: hsl(12, 30%, 48%);
+  --first-color-alt: hsl(12, 43%, 46%);
   --first-color-light: hsl(12, 24%, 32%);
   --second-color: hsl(39, 62%, 65%);
   --title-color: hsl(12, 12%, 16%);
@@ -20,7 +20,7 @@
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
-  --second-font: "Pacifico", cursive;
+  --second-font: 'Roboto', sans-serif;
   --biggest-font-size: 2.75rem;
   --big-font-size: 1.75rem;
   --h1-font-size: 1.5rem;
@@ -165,12 +165,13 @@ width: 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .25rem;
+  gap: .3rem;
   transition: .3s;
 }
 .nav-link i{
   color: var(--second-color);
-  font-size: 1.5rem
+  font-size: 1.5rem;
+  
 }
 .nav-link:hover{
   color: var(--second-color);
@@ -475,13 +476,13 @@ color: var(--white-color);
 .footer-input{
   width: 100%;
   background: transparent;
-  border: 2px solid var(--text-color-light);
+  border: 2px solid #fff;
   padding: 1.15rem 1.5rem;
   border-radius: 4rem;
   color: var(--white-color);
 }
 .footer-input::placeholder{
-  color: var(--text-color-light);
+  color: #fff;
 }
 .footer-btn{
   cursor: pointer;
@@ -490,12 +491,7 @@ color: var(--white-color);
 .footer-form p{
 font-size: var(--small-font-size);
 }
-.footer-privacy{
-  color: var(--second-color);
-}
-.footer-privacy:hover{
-  text-decoration: underline;
-}
+
 .footer-content{
   gap: 2rem;
 }
@@ -512,7 +508,7 @@ font-size: var(--small-font-size);
   color: var(--second-color);
 }
 .footer-copy{
-  color: var(--text-color-light);
+  color: #fff;
   font-size: var(--smaller-font-size);
   text-align: center;
 }
@@ -520,10 +516,10 @@ font-size: var(--small-font-size);
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar{
   width: .6rem;
-  background-color: hsl(12, 8%, 68%);
+  background-color: hsl(0, 0%, 100%);
 }
 ::-webkit-scrollbar-thumb{
-  background-color: hsl(12, 8%, 25%);
+  background-color: var(--first-color);
   border-radius: 1rem;
 }
 ::-webkit-scrollbar-thumb:hover{
@@ -597,6 +593,8 @@ padding-block: 7.5rem 5rem;
 }
 .nav-link{
   font-size: var(--h3-font-size);
+  margin-right: 1rem;
+  width: max-content;
 }
 .nav-link i{
   display: none;
@@ -604,6 +602,9 @@ padding-block: 7.5rem 5rem;
 .home-con{
   grid-template-columns: repeat(2,1fr);
   align-items: center;
+}
+.home-desc{
+  font-size: 1.25rem;
 }
 .soy-image{
   width: 400px;
@@ -635,13 +636,16 @@ grid-template-columns: repeat(3,1fr);
 padding-top: 2rem;
 gap: 6rem;
 }
+.steps-content p{
+  text-align: center;
+}
 .steps-card{
   width: 270px;
 }
 .steps-card-move{
   display: flex;
   flex-direction: column;
-  margin-top: 7rem;
+  margin-top: -3rem;
 }
 .steps-card-move .steps-circle{
 margin-left: initial;
@@ -650,6 +654,11 @@ margin-left: initial;
   order: -1;
   text-align: initial;
   margin-bottom: 3rem;
+  text-align: center;
+}
+.steps hr{
+  width: 150px;
+  margin: 1rem auto;
 }
 .steps-circle{
   width: 260px;
@@ -702,6 +711,7 @@ margin-left: initial;
 .show-scroll{
   bottom: 3rem;
 }
+
 }
 @media screen and (min-width: 1152px){
 .container{
